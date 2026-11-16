@@ -1,6 +1,6 @@
 # P1 + P2 — Fraud Scorer: Production API → End-to-End MLOps Pipeline
 
-**Stage:** Beginner (P1) → Intermediate (P2) · **Status:** In progress
+**Stage:** Beginner (P1) → Intermediate (P2) · **Status:** Complete (2026-11-15)
 **Repo:** [end_to_end_fraud_ml_project](https://github.com/NanaAkwasiAbayieBoateng/end_to_end_fraud_ml_project)
 
 This project lives in the existing `end_to_end_fraud_ml_project` repo, which is further along than a fresh scaffold. This plan is based on the repo's actual state (checked 2026-11-15).
