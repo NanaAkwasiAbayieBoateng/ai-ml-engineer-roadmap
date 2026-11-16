@@ -1,6 +1,6 @@
 # P6 — Capstone: Streaming Real-Time Inference on Cloud
 
-**Stage:** Advanced · **Status:** Planned · **Repo:** [streaming-fraud-capstone](https://github.com/NanaAkwasiAbayieBoateng/streaming-fraud-capstone)
+**Stage:** Advanced · **Status:** Scaffold built — runnable code in the repo (2026-11-15) · **Repo:** [streaming-fraud-capstone](https://github.com/NanaAkwasiAbayieBoateng/streaming-fraud-capstone)
 **Builds on:** P2 (registry + retraining) and P5 (monitoring) · **Goal:** the fraud scorer, grown into a real-time system — the strongest possible ending to the portfolio because it reuses everything.
 
 1. **Event source:** produce a stream of transaction events to Kafka (Kinesis if you chose AWS managed services). Define the event schema up front; add a schema registry if you want the extra rigour.

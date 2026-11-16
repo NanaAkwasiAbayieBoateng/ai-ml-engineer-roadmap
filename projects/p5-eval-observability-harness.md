@@ -1,6 +1,6 @@
 # P5 — LLM Evaluation & Observability Harness
 
-**Stage:** Advanced · **Status:** Planned · **Repo:** [llm-eval-harness](https://github.com/NanaAkwasiAbayieBoateng/llm-eval-harness)
+**Stage:** Advanced · **Status:** Scaffold built — runnable code in the repo (2026-11-15) · **Repo:** [llm-eval-harness](https://github.com/NanaAkwasiAbayieBoateng/llm-eval-harness)
 **Builds on:** P3 + P4 outputs · **Goal:** the project that reads "senior" — quality gates for non-deterministic systems.
 
 1. **Freeze golden datasets:** versioned eval sets for the RAG app (retrieval + answer quality) and the agent (task success), stored in the repo like code.

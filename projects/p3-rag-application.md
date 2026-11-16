@@ -1,6 +1,6 @@
 # P3 — RAG Application over Real Documents
 
-**Stage:** Intermediate · **Status:** Planned · **Repo:** [fraud-docs-rag](https://github.com/NanaAkwasiAbayieBoateng/fraud-docs-rag)
+**Stage:** Intermediate · **Status:** Scaffold built — runnable code in the repo (2026-11-15) · **Repo:** [fraud-docs-rag](https://github.com/NanaAkwasiAbayieBoateng/fraud-docs-rag)
 **Builds on:** P1's serving habits · **Goal:** a deployed retrieval app with measured quality — the eval report is the deliverable hiring managers actually read.
 
 1. **Pick the corpus and scope it.** A few hundred real documents you can legally use — e.g. public fraud/AML guidance, product documentation, or research papers. Write down the 5–10 question types the app must answer.
