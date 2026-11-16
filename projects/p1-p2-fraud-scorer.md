@@ -19,7 +19,7 @@ This project lives in the existing `end_to_end_fraud_ml_project` repo, which is 
 
 ### Phase 1 — Make CI reliably green
 
-The Nov 2026 scheduled Model CI/CD runs queued for ~24h and then cancelled — the signature of the self-hosted runner being offline. Decide: keep the runner machine on for scheduled runs, or move the test/gate jobs to a GitHub-hosted runner and keep only deployment self-hosted. **Done when:** pushes and scheduled runs complete green without manual intervention.
+Deployment here is local and intermittent (see Phase 4), so CI should not depend on a machine that is only sometimes on. The Nov 2026 scheduled Model CI/CD runs queued for ~24h and then cancelled — the signature of the self-hosted runner being offline. Best fit for this setup: move the test/gate jobs to a GitHub-hosted runner (free on a public repo) so every push gets checked anytime, keep deployment on the self-hosted runner, and trigger deployment manually (`workflow_dispatch`) when the machine is on. **Done when:** pushes complete green without the local machine being involved.
 
 ### Phase 2 — Real data: IEEE-CIS Fraud Detection
 
@@ -29,18 +29,24 @@ The current datasets (`data/fraud_dataset.csv`, `data/transactions.csv`) are sma
 
 `model_gate.py` is the right idea in file form. Register models in MLflow with version tags (AUC, PR-AUC, data window, git SHA), have the gate compare candidate vs Production and promote through the registry, and load the Production version at API startup. **Done when:** promotion happens through the registry and `/predict` responses report the registered version serving.
 
-### Phase 4 — A public deployment with real numbers
+### Phase 4 — Deployment model: local, intermittent, for learning
 
-The self-hosted deploy works, but a portfolio needs a public URL. Deploy the same compose stack to one cloud VM (the Azure-vs-AWS choice is still open; AWS appears in more tracked postings) behind HTTPS, and record cold-start time, p50/p95 latency, and monthly cost for the README. **Done when:** the endpoint answers from the public internet over HTTPS and the numbers are written down.
+This project is **not** permanently hosted, by design: it deploys to a local machine via the self-hosted runner, brought up from time to time for learning and demos. No cloud bill, no always-on URL. Portfolio evidence comes from artifacts instead of a live link:
+
+1. Record latency numbers from a local run (p50/p95 on `/predict`, cold-start time) and put them in the README.
+2. Record a short demo (Phase 6) while a deployment is up.
+3. Optional, only if a shareable live demo is ever wanted: spin up a cloud VM for a day, demo, tear it down — an event, not a hosting commitment.
+
+**Done when:** a fresh clone + the compose stack brings the service up locally, and the README carries real measured numbers.
 
 ### Phase 5 — Close the monitoring loop
 
-`drift_check.py` exists; make it a loop: scheduled run comparing recent prediction logs against training distributions, an automatic GitHub issue when a feature or the score distribution crosses threshold, and a retraining workflow that re-runs the Phase 3 gate and promotes only on a win. **Done when:** you can show one drift report and one issue the system opened by itself.
+`drift_check.py` exists; make it a loop: run it against recent prediction logs whenever a deployment is up (or on demand), open a GitHub issue automatically when a feature or the score distribution crosses threshold, and add a retraining workflow that re-runs the Phase 3 gate and promotes only on a win. **Done when:** you can show one drift report and one issue the system opened by itself.
 
 ### Phase 6 — Package as portfolio evidence
 
-Architecture diagram (data → train → gate/registry → API → monitoring), the Phase 4 latency/cost numbers, a 2–3 minute demo (prediction + registry + drift report), and the repo pinned on the profile. **Done when:** repo, live link, and numbers are reachable from one page.
+Architecture diagram (data → train → gate/registry → API → monitoring), the Phase 4 latency numbers, a 2–3 minute demo recording (prediction + registry + drift report), and the repo pinned on the profile. **Done when:** repo, demo, and numbers are reachable from one page.
 
 ---
 
-**What this proves, in postings language:** production Python and APIs, testing, Docker, CI/CD for models, a model promotion gate, drift monitoring, batch + online scoring, ONNX export — with the registry, real data, and public deployment phases completing the enterprise ML Engineer list.
+**What this proves, in postings language:** production Python and APIs, testing, Docker, CI/CD for models, a model promotion gate, drift monitoring, batch + online scoring, ONNX export — with the registry and real-data phases completing the enterprise ML Engineer list.

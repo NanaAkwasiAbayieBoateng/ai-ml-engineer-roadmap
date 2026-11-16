@@ -37,7 +37,7 @@ Time estimate for a data scientist making this switch with focused projects: rou
 - [Roadmap.sh AI Engineer checklist](https://roadmap.sh/ai-engineer)
 
 **Project:** [P1 — Classical ML model as a production API](projects/p1-p2-fraud-scorer.md)
-Refactor a notebook model into a package, serve with FastAPI, add pytest, Docker, CI, deploy. My [end_to_end_fraud_ml_project](https://github.com/NanaAkwasiAbayieBoateng/end_to_end_fraud_ml_project) already covers most of P1 — a reliably green CI and a public deployment are the Stage 1 exit.
+Refactor a notebook model into a package, serve with FastAPI, add pytest, Docker, CI, deploy. My [end_to_end_fraud_ml_project](https://github.com/NanaAkwasiAbayieBoateng/end_to_end_fraud_ml_project) already covers most of P1 — it deploys to my local machine via a self-hosted runner, brought up from time to time for learning rather than hosted permanently. A reliably green CI and a recorded demo with real latency numbers are the Stage 1 exit.
 
 ## Stage 2 — Intermediate: production ML + LLM apps
 
