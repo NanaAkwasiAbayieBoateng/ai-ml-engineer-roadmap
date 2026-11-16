@@ -9,10 +9,10 @@ Each project has a full step-by-step deep-dive in [`projects/`](projects/), and 
 | Stage | Project | Repository | Status |
 |---|---|---|---|
 | Beginner → Intermediate | P1+P2 — Fraud scorer: production API + MLOps pipeline | [end_to_end_fraud_ml_project](https://github.com/NanaAkwasiAbayieBoateng/end_to_end_fraud_ml_project) | Complete |
-| Intermediate | P3 — RAG over fraud/AML guidance documents | [fraud-docs-rag](https://github.com/NanaAkwasiAbayieBoateng/fraud-docs-rag) | Planned |
-| Advanced | P4 — Fraud alert investigator agent | [fraud-alert-agent](https://github.com/NanaAkwasiAbayieBoateng/fraud-alert-agent) | Planned |
-| Advanced | P5 — LLM evaluation & observability harness | [llm-eval-harness](https://github.com/NanaAkwasiAbayieBoateng/llm-eval-harness) | Planned |
-| Advanced | P6 — Streaming real-time fraud capstone | [streaming-fraud-capstone](https://github.com/NanaAkwasiAbayieBoateng/streaming-fraud-capstone) | Planned |
+| Intermediate | P3 — RAG over fraud/AML guidance documents | [fraud-docs-rag](https://github.com/NanaAkwasiAbayieBoateng/fraud-docs-rag) | Scaffold built |
+| Advanced | P4 — Fraud alert investigator agent | [fraud-alert-agent](https://github.com/NanaAkwasiAbayieBoateng/fraud-alert-agent) | Scaffold built |
+| Advanced | P5 — LLM evaluation & observability harness | [llm-eval-harness](https://github.com/NanaAkwasiAbayieBoateng/llm-eval-harness) | Scaffold built |
+| Advanced | P6 — Streaming real-time fraud capstone | [streaming-fraud-capstone](https://github.com/NanaAkwasiAbayieBoateng/streaming-fraud-capstone) | Scaffold built |
 
 ## The two roles, and where they meet
 
