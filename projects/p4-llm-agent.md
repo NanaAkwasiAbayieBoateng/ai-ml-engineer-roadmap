@@ -1,6 +1,7 @@
 # P4 — LLM Agent with Tool Use
 
-**Stage:** Advanced · **Builds on:** P3 (its search becomes one of the agent's tools) · **Goal:** an agent that does a bounded real job, safely, with receipts.
+**Stage:** Advanced · **Status:** Planned · **Repo:** [fraud-alert-agent](https://github.com/NanaAkwasiAbayieBoateng/fraud-alert-agent)
+**Builds on:** P3 (its search becomes one of the agent's tools) · **Goal:** an agent that does a bounded real job, safely, with receipts.
 
 1. **Define the job narrowly:** e.g. a fraud-alert investigator — given an alert, it gathers evidence and drafts a case summary. One job, done well, beats a general assistant.
 2. **Build the tools (at least 3),** each with a strict input schema and errors returned as text the agent can act on: a read-only SQL query tool over a transactions database, the P3 document search, and one external API or stats tool.

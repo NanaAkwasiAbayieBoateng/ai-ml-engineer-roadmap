@@ -1,6 +1,7 @@
 # P5 — LLM Evaluation & Observability Harness
 
-**Stage:** Advanced · **Builds on:** P3 + P4 outputs · **Goal:** the project that reads "senior" — quality gates for non-deterministic systems.
+**Stage:** Advanced · **Status:** Planned · **Repo:** [llm-eval-harness](https://github.com/NanaAkwasiAbayieBoateng/llm-eval-harness)
+**Builds on:** P3 + P4 outputs · **Goal:** the project that reads "senior" — quality gates for non-deterministic systems.
 
 1. **Freeze golden datasets:** versioned eval sets for the RAG app (retrieval + answer quality) and the agent (task success), stored in the repo like code.
 2. **Error analysis first (the Hamel method):** read 50–100 real traces yourself and label failure categories — retrieval miss, wrong tool, unsupported claim, bad citation, refusal error. Let the categories come from the data, not from a metrics catalogue.

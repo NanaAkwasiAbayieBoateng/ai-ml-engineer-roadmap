@@ -2,7 +2,17 @@
 
 A combined roadmap for **ML Engineer** and **AI Engineer** roles, built from current job postings — a 95-ad AI Engineer analysis (Oct 2026), a 1,886-role skills survey (May 2026), Stanford HAI / Lightcast posting data, and a current enterprise ML Engineer posting. Organized the way I learn: **projects first, resources as scaffolding**, staged Beginner → Intermediate → Advanced.
 
-Each project has a full step-by-step deep-dive in [`projects/`](projects/).
+Each project has a full step-by-step deep-dive in [`projects/`](projects/), and each project lives in its own repo, linked from here — this repo is the hub.
+
+## Project repos
+
+| Stage | Project | Repository | Status |
+|---|---|---|---|
+| Beginner → Intermediate | P1+P2 — Fraud scorer: production API + MLOps pipeline | [end_to_end_fraud_ml_project](https://github.com/NanaAkwasiAbayieBoateng/end_to_end_fraud_ml_project) | In progress |
+| Intermediate | P3 — RAG over fraud/AML guidance documents | [fraud-docs-rag](https://github.com/NanaAkwasiAbayieBoateng/fraud-docs-rag) | Planned |
+| Advanced | P4 — Fraud alert investigator agent | [fraud-alert-agent](https://github.com/NanaAkwasiAbayieBoateng/fraud-alert-agent) | Planned |
+| Advanced | P5 — LLM evaluation & observability harness | [llm-eval-harness](https://github.com/NanaAkwasiAbayieBoateng/llm-eval-harness) | Planned |
+| Advanced | P6 — Streaming real-time fraud capstone | [streaming-fraud-capstone](https://github.com/NanaAkwasiAbayieBoateng/streaming-fraud-capstone) | Planned |
 
 ## The two roles, and where they meet
 
@@ -27,7 +37,7 @@ Time estimate for a data scientist making this switch with focused projects: rou
 - [Roadmap.sh AI Engineer checklist](https://roadmap.sh/ai-engineer)
 
 **Project:** [P1 — Classical ML model as a production API](projects/p1-p2-fraud-scorer.md)
-Refactor a notebook model into a package, serve with FastAPI, add pytest, Docker, CI, deploy to one cloud. (My fraud-scorer project is already most of P1 — finishing the deployment is the Stage 1 exit.)
+Refactor a notebook model into a package, serve with FastAPI, add pytest, Docker, CI, deploy. My [end_to_end_fraud_ml_project](https://github.com/NanaAkwasiAbayieBoateng/end_to_end_fraud_ml_project) already covers most of P1 — a reliably green CI and a public deployment are the Stage 1 exit.
 
 ## Stage 2 — Intermediate: production ML + LLM apps
 
